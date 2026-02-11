@@ -4,23 +4,24 @@ import Image from "next/image";
 import Link from "next/link";
 import TrendingFlatIcon from "@mui/icons-material/TrendingFlat";
 import { gsap } from "gsap";
+import img1 from '../../../public/img/my-image.png'
+import img2 from '../../../public/img/my-image1.png'
+import img3 from '../../../public/img/my-image2.png'
+
 
 const HeroSection = () => {
   const categories = [
     {
       name: "Frontend Developer",
-      image:
-        "https://i.pinimg.com/736x/7c/30/2c/7c302cc9df9a62950283fd6d10ec6a3a.jpg",
+      image:  img1,  
     },
     {
       name: "React Developer",
-      image:
-        "https://i.pinimg.com/736x/d1/02/4d/d1024d3d776d6d80d73a9b5d6d55a3c8.jpg",
+      image:  img2,  
     },
     {
       name: "Comedians",
-      image:
-        "https://www.sydneyoperahouse.com/sites/default/files/collaborodam_assets/EventName_16x9_Inline.jpg",
+      image:  img3,  
     },
   ];
 
@@ -64,9 +65,7 @@ const HeroSection = () => {
   const activeCategory = categories[currentIndex];
 
   return (
-    <div onClick={handleNextCategory} className="relative flex flex-col gap-10 justify-center items-center">
-      <section>
-        <section className="max-w-screen-xl mt-40 text-white space-x-28 flex justify-around items-center">
+    <div onClick={handleNextCategory} className=" flex justify-around items-center">
           <div className="flex justify-center items-center sticky top-36">
             <div
               className="w-[610px] h-[610px] rounded-full bg-gradient-to-br from-[#F16633CC] to-[#FD2D7DCC] relative overflow-hidden border-[10px] border-gradient-to-br ml-28"
@@ -87,12 +86,12 @@ const HeroSection = () => {
 
             <div className="absolute bottom-[-30px] left-[435px] transform -translate-x-[50%] flex flex-col items-center">
               <div
-                className="w-[625px] h-[625px] relative border-[6px] border-[#D17E17] rounded-full border-t-transparent border-l-transparent border-r-transparent border-b-4"
+                className="w-[625px] h-[625px] relative border-[6px] border-[#ba6b3f] rounded-full border-t-transparent border-l-transparent border-r-transparent border-b-4"
                 style={{ transform: "rotate(-45deg) translateX(-4px)" }}
               ></div>
 
               <div
-                className="w-4 h-4 border-t-[4px] absolute left-[330px] -bottom-2 border-l-[4px] border-[#D17E17] transform -rotate-45 -mt-[6px]"
+                className="w-4 h-4 border-t-[4px] absolute left-[330px] -bottom-2 border-l-[4px] border-[#ba6b3f] transform -rotate-45 -mt-[6px]"
               ></div>
             </div>
 
@@ -119,8 +118,6 @@ const HeroSection = () => {
               </p>
             </Link>
           </div>
-        </section>
-      </section>
     </div>
   );
 };

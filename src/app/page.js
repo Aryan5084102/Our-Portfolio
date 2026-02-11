@@ -9,7 +9,7 @@ import TeamSection from "./component/TeamSection";
 
 export default function Home() {
   return (
-   <div className="flex flex-col gap-y-24">
+   <div className="flex flex-col w-[85%] mx-auto gap-12">
       <Navbar />
       <HeroSection />
       <Gallery />
