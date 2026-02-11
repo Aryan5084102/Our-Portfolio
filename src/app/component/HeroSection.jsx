@@ -4,24 +4,25 @@ import Image from "next/image";
 import Link from "next/link";
 import TrendingFlatIcon from "@mui/icons-material/TrendingFlat";
 import { gsap } from "gsap";
-import img1 from '../../../public/img/my-image.png'
-import img2 from '../../../public/img/my-image1.png'
-import img3 from '../../../public/img/my-image2.png'
+import img from '../../../public/img/my-image.png'
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import XIcon from '@mui/icons-material/X';
 
 
 const HeroSection = () => {
   const categories = [
     {
       name: "Frontend Developer",
-      image:  img1,  
+      image:  img,  
     },
     {
       name: "React Developer",
-      image:  img2,  
+      image:  img,  
     },
     {
-      name: "Comedians",
-      image:  img3,  
+      name: "Freelancer",
+      image:  img,  
     },
   ];
 
@@ -62,13 +63,21 @@ const HeroSection = () => {
     }
   };
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      handleNextCategory();
+    }, 3000); 
+
+    return () => clearInterval(interval);
+  }, [currentIndex]);
+
   const activeCategory = categories[currentIndex];
 
   return (
-    <div onClick={handleNextCategory} className=" flex justify-around items-center">
+    <div  className=" flex justify-around items-center">
           <div className="flex justify-center items-center sticky top-36">
             <div
-              className="w-[610px] h-[610px] rounded-full bg-gradient-to-br from-[#F16633CC] to-[#FD2D7DCC] relative overflow-hidden border-[10px] border-gradient-to-br ml-28"
+              className="w-[610px] h-[610px] rounded-full bg-gradient-to-br from-[#F16633CC] to-[#ba6b3f] relative overflow-hidden border-[10px] border-gradient-to-br ml-28"
               style={{
                 borderColor: "rgba(241, 102, 51, 0.8) rgba(253, 45, 125, 0.8)",
                 clipPath: "circle(50% at 50% 50%)",
@@ -94,29 +103,53 @@ const HeroSection = () => {
                 className="w-4 h-4 border-t-[4px] absolute left-[330px] -bottom-2 border-l-[4px] border-[#ba6b3f] transform -rotate-45 -mt-[6px]"
               ></div>
             </div>
-
-            <span
+            
+            <div 
               ref={textRef}
-              className="absolute z-50 top-60 text-[75px] -left-20 cursor-pointer"
-              onClick={handleNextCategory}
+              className="absolute z-50  top-60 -left-20 flex flex-col "
             >
-              {activeCategory.name}
-            </span>
+              <span className="highlight text-[35px] ml-4">
+                I'm a
+              </span>
+              <span
+                className=" text-[40px]"
+              >
+                {activeCategory.name}
+              </span>
+
+            </div>
           </div>
           <div className="top-40">
-            <p className="max-w-60 text-wrap text-white text-5xl leading-[60px]">
-              <span className="text-[#6c6c71]">Choose from</span> 100+ Categories
+            <p className="max-w-96 text-wrap text-white text-xl leading-[35px]">
+              <div className="text-[25px] text-center mb-6">Our Focus</div>
+              <span>
+                Building more <span className="highlight">Scalable, robust and smooth user Interface</span> like FinTech and dashboard solutions specializing in <span className="highlight">React.js and Next.js </span>. With expertise in <span className="highlight">TypeScript, GraphQL, and Tanstack Query</span>. I focus on delivering <span className="highlight">high-performance, responsive applications</span> tailored to streamline business operations and drive growth.
+              </span>
             </p>
+
             <Link
               className="flex items-center gap-4 mt-4"
-              href="/browse"
+              href="mailto:aryanverma5084102@gmail.com" 
               previewlistener="true"
             >
-              <p className="bg-gradient-to-r from-[#ba708d] via-[#FF8DB9] to-[#F86E42] inline-block text-transparent bg-clip-text text-2xl leading-[105px]">
-                Explore all categories{" "}
-                <TrendingFlatIcon className="text-3xl text-[#ba708d] ml-3" />
+              <p className="bg-gradient-to-r from-[#3bdf7f] via-[#ba6b3f] to-[#F86E42] inline-block text-transparent bg-clip-text text-2xl leading-[60px]">
+                Connect with me{" "}
               </p>
             </Link>
+
+            <div className="flex items-center gap-6 mt-2">
+              <Link href="https://www.linkedin.com/in/aryan5084102/" target="_blank" className="text-white hover:text-[#ba6b3f] transition-colors">
+                <LinkedInIcon className="text-4xl" />
+              </Link>
+              
+              <Link href="https://github.com/Aryan5084102" target="_blank" className="text-white hover:text-[#ba6b3f] transition-colors">
+                <GitHubIcon className="text-4xl" />
+              </Link>
+
+              <Link href="https://x.com/aryan5084102" target="_blank" className="text-white hover:text-[#ba6b3f] transition-colors">
+                <XIcon className="text-2xl" />
+              </Link>
+            </div>
           </div>
     </div>
   );
