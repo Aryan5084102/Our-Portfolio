@@ -36,7 +36,7 @@ const SVGComponent = () => {
 
     const path2 = document.createElementNS("http://www.w3.org/2000/svg", "path");
     path2.setAttribute("fill", "none");
-    path2.setAttribute("stroke", "gray"); 
+    path2.setAttribute("stroke", "#ba6b3f"); 
     path2.setAttribute("stroke-width", "20px"); 
     path2.setAttribute("id", "path2");
     path2.setAttribute(

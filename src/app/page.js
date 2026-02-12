@@ -1,6 +1,6 @@
 import Gallery from "./component/Gallery";
 import HeroSection from "./component/HeroSection";
-import HoverCard from "./component/HoverCard";
+import Journey from "./component/Journey";
 import MeetTeam from './component/MeetTeam'
 import Navbar from "./component/Navbar";
 import Shows from "./component/Shows";
@@ -12,8 +12,8 @@ export default function Home() {
    <div className="flex flex-col w-[85%] mx-auto gap-12">
       <Navbar />
       <HeroSection />
-      <Gallery />
-      <HoverCard />
+      {/* <Gallery /> */}
+      <Journey />
       <MeetTeam />
       <Shows />
       <TeamSection />
