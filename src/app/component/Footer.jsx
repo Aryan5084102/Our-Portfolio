@@ -1,8 +1,10 @@
 import Link from 'next/link';
 import React from 'react'
 import { IoIosArrowRoundForward } from "react-icons/io";
+import { footerData } from '../constant/footerData';
 
 const Footer = () => {
+   
     return (
         <div className=" min-h-screen flex justify-center items-center relative">
             <div className='w-full z-0 overflow-auto flex'>
@@ -24,30 +26,9 @@ const Footer = () => {
                 </div>
 
                 <div className="relative">
-                    <div className="absolute -top-[200px] -left-[400px] backdrop-blur-xl text-opacity-90 bg-opacity-35 border-opacity-35 border-2 border-white  -rotate-12 bg-gray-700 text-white rounded-full text-xl px-7 py-2 shadow-lg">
-                        Fun
-                    </div>
-                    <div className="absolute -top-[270px] -right-[400px] backdrop-blur-xl text-opacity-90 bg-opacity-35 border-opacity-35 border-2 border-white rotate-12 bg-gray-700 text-white rounded-full text-xl px-7 py-2 shadow-lg">
-                        Inclusive
-                    </div>
-                    <div className="absolute top-[65px] -left-[310px] rotate-12 backdrop-blur-2xl bg-gray-700 text-white bg-opacity-35 border-opacity-15 border-2 border-white opacity-65 rounded-full text-base px-7 py-2 shadow-lg">
-                        Focused
-                    </div>
-                    <div className="absolute top-[60px] -left-[220px] -rotate-12 backdrop-blur-2xl bg-gray-700 text-white bg-opacity-35 border-opacity-15 border-2 border-white rounded-full opacity-65 text-base px-7 py-2 shadow-lg">
-                        Collaborative
-                    </div>
-                    <div className="absolute top-[65px] -left-[100px] rotate-12 bg-gray-700 backdrop-blur-2xl  text-white bg-opacity-35 border-opacity-15 border-2 border-white opacity-65 rounded-full text-base px-7 py-2 shadow-lg">
-                        United
-                    </div>
-                    <div className="absolute top-[63px] -left-[10px] -rotate-12 bg-gray-700 backdrop-blur-2xl  text-white bg-opacity-35 border-opacity-15 border-2 border-white rounded-full opacity-65 text-base px-7 py-2 shadow-lg">
-                        Vibrant
-                    </div>
-                    <div className="absolute top-[65px] left-[80px] rotate-12 bg-gray-700 backdrop-blur-2xl  text-white bg-opacity-35 border-opacity-15 border-2 border-white opacity-65 rounded-full text-base px-7 py-2 shadow-lg">
-                        Dynamic
-                    </div>
-                    <div className="absolute top-[65px] left-[190px] -rotate-12 bg-gray-700 backdrop-blur-2xl text-white bg-opacity-35 border-opacity-15 border-2 border-white rounded-full opacity-65 text-base px-7 py-2 shadow-lg">
-                        Motivated
-                    </div>
+                    {footerData.map((item, index) =>(
+                        <div key={index} className={`${item?.class}`}>{item?.text}</div>
+                    ))}                   
                 </div>
             </div>
         </div>

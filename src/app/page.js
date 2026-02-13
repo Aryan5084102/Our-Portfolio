@@ -1,6 +1,5 @@
 import HeroSection from "./component/HeroSection";
 import Journey from "./component/Journey";
-import Navbar from "./component/Navbar";
 import Projects from "./component/Projects";
 import Skills from "./component/Skills";
 import Footer from "./component/Footer";
