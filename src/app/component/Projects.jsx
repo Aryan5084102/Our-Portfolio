@@ -6,6 +6,7 @@ import project1 from '../../../public/img/Project1.png'
 import project2 from '../../../public/img/Project2.png'
 import project3 from '../../../public/img/Project3.png'
 import project4 from '../../../public/img/Project4.png'
+import Link from 'next/link';
 
 
 const Projects = () => {
@@ -16,25 +17,25 @@ const Projects = () => {
             imageSrc: project1,
             thead: "Eccommerce Website",
             text: " with all features like add to cart, remove from cart, same for wishlist also , skeleton and payment integration of razorpay.",
-            // date: "14 March 2023"
+            liveLink : "https://fakeproductdash.netlify.app/",
+            codeLink : "https://github.com/Aryan5084102/GlaMart---The-Online-Market"
         },
         {
             imageSrc: project2,
             thead: "Betting website",
             text: "this is user side and user can place a bet all the matches show on real time.",
-            // date: "14 March 2023"
         },
         {
             imageSrc: project3,
             thead: "Betting website",
             text: "this is admin page for betting website and admin can track all the betplace here and manages the payment also .",
-            // date: "14 March 2023"
         },
-         {
+        {
             imageSrc: project4,
             thead: "Role Based Access Dashboard",
             text: "it is a dashboard for admin, client, user perspective and all the products show on dashboard.",
-            // date: "14 March 2023"
+            liveLink : "https://rbacdashboardwithauthentication.netlify.app/login",
+            codeLink : "https://github.com/Aryan5084102/RBAC-Dashboard-with-Authentication"
         },
     ];
 
@@ -47,7 +48,7 @@ const Projects = () => {
     };
 
     return (
-        <div className="undefined   mx-auto grid grid-cols-12 relative my-8 ">
+        <div className="undefined   mx-auto grid grid-cols-12 relative my-8">
             <div className="relative w-full overflow-hidden col-span-2">
                 <div className="absolute left-0 top-[7%] w-full rotate-[-40deg]">
                     <div
@@ -224,26 +225,34 @@ const Projects = () => {
                     <div className='text-[28px] font-bold text-[#ba6b3f] mx-auto'>Recent Projects</div>
                 </div>
                 <div className="whitespace-no-wrap mt-3 sm:mt-0">
-                    <div className="max-w-screen-lg xl:px-20 relative">
-                        <div className="flex items-center justify-center space-x-5 relative overflow-hidden">
-                            <div className="  bg-gradient-to-br from-orange-600 to-[#ba6b3f] p-3 lg:min-w-[28rem]  lg:h-[250px]  overflow-hidden">
+                    <div className="max-w-screen-xl xl:px-20 relative">
+                        <div className="flex items-center justify-center space-x-10 relative overflow-hidden">
+                            <div className="   p-3 lg:min-w-[32rem]  lg:h-[350px]  overflow-hidden">
                                 <div className="relative overflow-hidden w-full h-full  aspect-[16/9]">
                                     <Image
                                         src={slides[currentIndex].imageSrc}
                                         alt={`Slide ${currentIndex + 1}`}
                                         layout="fill"
-                                        objectFit="cover"
-                                        className='divide-opacity-50 opacity-70'
+                                        // objectFit="cover"
+                                        className='divide-opacity-50'
                                     />
                                 </div>
                             </div>
-                            <div className="min-w-80  flex flex-col justify-content items-center">
-                                <p className="text-white w-full  px-4 xxl:px-4 xl:pr-10 items-center text-start h-full lg:text-[24px]  ">
+                            <div className=" w-[400px] flex flex-col justify-between gap-5 items-center">
+                                <p className="text-white min-w-80  px-4 xxl:px-4 xl:pr-10 items-center text-start h-full lg:text-[24px]  ">
                                     <span className="text-[#ba6b3f] font-semibold">{slides[currentIndex].thead}</span>
                                     &nbsp;
                                     {slides[currentIndex].text}
                                     &nbsp;&nbsp;
                                 </p>
+                                <div className='flex justify-between items-center gap-5 mt-5 '>
+                                    {slides[currentIndex].codeLink && 
+                                        <Link className='bg-gradient-to-b from-[#3bdf7f] hover:scale-110 to-[#ba6b3f] text-[14px] px-6 py-3 rounded-full' href={slides[currentIndex].codeLink} target='_blank' >GitHub Link </Link>
+                                    }
+                                    {slides[currentIndex].liveLink && 
+                                        <Link className='bg-gradient-to-b from-[#3bdf7f] hover:scale-110 to-[#ba6b3f] px-6 py-3 rounded-full' href={slides[currentIndex].liveLink} target='_blank'>Deploy Link</Link>
+                                    }
+                                </div>
                             </div>
                         </div>
                         <button
