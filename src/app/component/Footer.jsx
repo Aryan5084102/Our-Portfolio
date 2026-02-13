@@ -1,39 +1,26 @@
+import Link from 'next/link';
 import React from 'react'
 import { IoIosArrowRoundForward } from "react-icons/io";
 
-const TeamSection = () => {
+const Footer = () => {
     return (
         <div className=" min-h-screen flex justify-center items-center relative">
             <div className='w-full z-0 overflow-auto flex'>
-                <div className='absolute top-1/2 left-0 w-[450px] h-[450px] opacity-70 rounded-full bg-gradient-to-l from-orange-500 via-black to-gray-800'></div>
-                <div className='absolute top-16 right-0 w-[450px] h-[450px] rounded-full bg-gradient-to-r from-pink-400 opacity-65  to-gray-800 '></div>
+                <div className='absolute top-1/2 left-0 w-[450px] h-[450px] opacity-70 rounded-full bg-gradient-to-l from-[#3bdf7f] via-[#ba6b3f] to-gray-800'></div>
+                <div className='absolute top-16 right-0 w-[450px] h-[450px] rounded-full bg-gradient-to-r from-[#ba6b3f] opacity-65  to-[#3bdf7f] '></div>
             </div>
             <div className=" border z-50 border-opacity-20 bg-opacity-20 overflow-hidden backdrop-blur-xl shadow-2xl border-l-0  border-white flex flex-col justify-center items-center  rounded-full px-8 py-16 w-[80%] h-[500px] absolute">
-                <span className="absolute top-20 left-20 -rotate-12 text-pink-400 font-medium text-2xl">
-                    we are the team of
-                </span>
-                <div className="relative transform -translate-x-[50%]  ">
-                    <div
-                        className="w-[70px] h-[70px] absolute -top-[40px] -left-[355px]  border-[2px] border-pink-400 rounded-full border-t-transparent border-l-transparent border-r-transparent  border-b-2 "
-                        style={{ transform: "rotate(-110deg) translateX(-4px)" }}
-                    ></div>
-                    <div
-                        className="w-2 h-2 border-t-[2px] absolute top-[12px] -left-[291px]   border-l-[2px] border-pink-400 transform  -rotate-90 -mt-[6px]"
-                    ></div>
-                </div>
-
                 <div className="text-center">
                     <h1 className="text-[80px] text-white font-medium">
-                        20+ Talented Folks
+                        10+ Projects done
                     </h1>
                     <p className="text-gray-300 mt-4 max-w-xl mx-auto text-lg ">
-                        From passion-driven dedication to impactful contribution, we do it
-                        all here. We are growing and will be excited to hear from you!
+                        If you are looking for top 1% Frontend Developer, who take care more scalable, modern looking , smooth user experience then reach out to me.
                     </p>
-                    <button className="bg-gradient-to-r flex items-center space-x-2 mx-auto from-pink-500 to-orange-400 text-white mt-10 py-3 px-8 rounded-full text-lg hover:scale-105 transition-transform">
-                        <div>Join our team </div>
+                    <Link href={'https://www.linkedin.com/in/aryan5084102/'} target='_blank' className="bg-gradient-to-r w-fit flex items-center space-x-2 mx-auto from-[#ba6b3f] to-[#3bdf7f] text-white mt-10 py-3 px-8 rounded-full text-lg hover:scale-105 transition-transform">
+                        <div>Let's Connect</div>
                         <IoIosArrowRoundForward className='text-2xl' />
-                    </button>
+                    </Link>
                 </div>
 
                 <div className="relative">
@@ -62,10 +49,9 @@ const TeamSection = () => {
                         Motivated
                     </div>
                 </div>
-
             </div>
         </div>
     )
 }
 
-export default TeamSection
+export default Footer

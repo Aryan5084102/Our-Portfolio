@@ -1,20 +1,41 @@
-import React from 'react'
-import Link from 'next/link'
+"use client"; 
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 const Navbar = () => {
-    
-  return (
-    <div className='flex justify-between sticky top-0 items-center z-20 p-4 '>
-        <div className='flex items-center gap-5'>
-            <Link href="/" className='text-2xl font-semibold'>Aryan Verma</Link>
-        </div>
-        <div>
-            <Link href="/services" className='cursor-pointer hover:text-[#3bdf7f]'>
-                Our Services
-            </Link>
-        </div>
-    </div>
-  )
-}
+    const [isScrolled, setIsScrolled] = useState(false);
 
-export default Navbar
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 10);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    return (
+        <nav className={`
+            fixed top-0 left-0 w-full z-50 p-4 transition-all duration-300 border-b
+            ${isScrolled 
+                ? 'bg-black/30 backdrop-blur-lg border-white/10 shadow-xl py-3' 
+                : 'bg-transparent border-transparent py-5'
+            }
+        `}>
+            <div className='max-w-7xl mx-auto flex justify-between items-center'>
+                <div className='flex items-center gap-5'>
+                    <Link href="/" className='text-2xl font-bold tracking-tight text-white'>
+                        Aryan Verma
+                    </Link>
+                </div>
+                <div>
+                    <Link href="/services" className='font-medium text-white hover:text-[#3bdf7f] transition-colors'>
+                        Our Services
+                    </Link>
+                </div>
+            </div>
+        </nav>
+    );
+};
+
+export default Navbar;
