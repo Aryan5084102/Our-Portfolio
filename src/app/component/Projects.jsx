@@ -2,28 +2,39 @@
 import React, { useState } from 'react'
 import Image from "next/image";
 import '../globals.css'
+import project1 from '../../../public/img/Project1.png'
+import project2 from '../../../public/img/Project2.png'
+import project3 from '../../../public/img/Project3.png'
+import project4 from '../../../public/img/Project4.png'
 
-const Shows = () => {
+
+const Projects = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const slides = [
         {
-            imageSrc: "https://i.pinimg.com/736x/d1/02/4d/d1024d3d776d6d80d73a9b5d6d55a3c8.jpg",
-            thead: "Nora Fatehi",
-            text: "for an event hosted by XYZ permormed at pune.",
-            date: "14 March 2023"
+            imageSrc: project1,
+            thead: "Eccommerce Website",
+            text: " with all features like add to cart, remove from cart, same for wishlist also , skeleton and payment integration of razorpay.",
+            // date: "14 March 2023"
         },
         {
-            imageSrc: "https://i0.wp.com/deadant.co/wp-content/uploads/2024/04/Kapil-Sharma-Show.png?fit=1366%2C768&ssl=1",
-            thead: "Kapil Sharma",
-            text: "for an event hosted by XYZ permormed at pune.",
-            date: "14 March 2023"
+            imageSrc: project2,
+            thead: "Betting website",
+            text: "this is user side and user can place a bet all the matches show on real time.",
+            // date: "14 March 2023"
         },
         {
-            imageSrc: "https://blackhattalent.com/wp-content/uploads/2023/04/Khan.png",
-            thead: "Zakir Khan ",
-            text: "for an event hosted at pune for Meesho.",
-            date: "14 March 2023"
+            imageSrc: project3,
+            thead: "Betting website",
+            text: "this is admin page for betting website and admin can track all the betplace here and manages the payment also .",
+            // date: "14 March 2023"
+        },
+         {
+            imageSrc: project4,
+            thead: "Role Based Access Dashboard",
+            text: "it is a dashboard for admin, client, user perspective and all the products show on dashboard.",
+            // date: "14 March 2023"
         },
     ];
 
@@ -44,7 +55,7 @@ const Shows = () => {
                         style={{ transform: "translateX(-1148.88px)", animation: 'marquee 60s linear infinite', }}
                     >
                         <p className="w-full text-center min-w-[20rem] flex justify-center items-center font-500 text-[25px] text-white">
-                            HEADLIGHTS OF TODAY
+                            FRONTEND DEVELOPER
                         </p>
                         <div className="min-w-[4rem]">
                             <svg
@@ -62,7 +73,7 @@ const Shows = () => {
                             </svg>
                         </div>
                         <p className="text-white w-full text-center min-w-[20rem] flex justify-center items-center font-500 text-[25px]">
-                            HEADLIGHTS OF TODAY
+                             REACT DEVELOPER
                         </p>
                         <div className="min-w-[4rem]">
                             <svg
@@ -80,7 +91,7 @@ const Shows = () => {
                             </svg>
                         </div>
                         <p className="text-white w-full text-center min-w-[20rem] flex justify-center items-center font-500 text-[25px]">
-                            HEADLIGHTS OF TODAY
+                            FRONTEND DEVELOPER
                         </p>
                         <div className="min-w-[4rem]">
                             <svg
@@ -98,7 +109,7 @@ const Shows = () => {
                             </svg>
                         </div>
                         <p className="text-white w-full text-center min-w-[20rem] flex justify-center items-center font-500 text-[25px]">
-                            HEADLIGHTS OF TODAY
+                            REACT DEVELOPER
                         </p>
                         <div className="min-w-[4rem]">
                             <svg
@@ -116,7 +127,7 @@ const Shows = () => {
                             </svg>
                         </div>
                         <p className="text-white w-full text-center min-w-[20rem] flex justify-center items-center font-500 text-[25px]">
-                            HEADLIGHTS OF TODAY
+                           FRONTEND DEVELOPER
                         </p>
                         <div className="min-w-[4rem]">
                             <svg
@@ -134,7 +145,7 @@ const Shows = () => {
                             </svg>
                         </div>
                         <p className="text-white w-full text-center min-w-[20rem] flex justify-center items-center font-500 text-[25px]">
-                            HEADLIGHTS OF TODAY
+                            REACT DEVELOPER
                         </p>
                         <div className="min-w-[4rem]">
                             <svg
@@ -152,7 +163,7 @@ const Shows = () => {
                             </svg>
                         </div>
                         <p className="text-white w-full text-center min-w-[20rem] flex justify-center items-center font-500 text-[25px]">
-                            HEADLIGHTS OF TODAY
+                            FRONTEND DEVELOPER
                         </p>
                         <div className="min-w-[4rem]">
                             <svg
@@ -170,7 +181,7 @@ const Shows = () => {
                             </svg>
                         </div>
                         <p className="text-white w-full text-center min-w-[20rem] flex justify-center items-center font-500 text-[25px]">
-                            HEADLIGHTS OF TODAY
+                            REACT DEVELOPER
                         </p>
                         <div className="min-w-[4rem]">
                             <svg
@@ -188,7 +199,7 @@ const Shows = () => {
                             </svg>
                         </div>
                         <p className="w-full text-center min-w-[20rem] flex justify-center items-center font-500 text-[25px] text-white">
-                            HEADLIGHTS OF TODAY
+                            FRONTEND DEVELOPER
                         </p>
                         <div className="min-w-[4rem]">
                             <svg
@@ -210,15 +221,13 @@ const Shows = () => {
             </div>
             <div className="flex flex-col justify-between gap-14 col-span-1 md:col-span-8 relative overflow-hidden lg:px-5 xl:px-5 xxlpx-0">
                 <div className="text-2xl font-semibold flex flex-row justify-between items-start w-full px-4 md:px-0">
-                    <h2 className="main_heading text-white text-[64px] font-[300] leading-tight text-center px-24 lg:text-[40px] xl:text-[50px] xxl:text-[64px]">
-                        Recent shows made star-studded via StarClinch
-                    </h2>
+                    <div className='text-[28px] font-bold text-[#ba6b3f] mx-auto'>Recent Projects</div>
                 </div>
                 <div className="whitespace-no-wrap mt-3 sm:mt-0">
                     <div className="max-w-screen-lg xl:px-20 relative">
                         <div className="flex items-center justify-center space-x-5 relative overflow-hidden">
-                            <div className="rounded-t-full rounded-b-3xl bg-gradient-to-br from-orange-600 to-pink-800 p-3 lg:min-w-[28rem] lg:h-[500px]  overflow-hidden">
-                                <div className="relative overflow-hidden w-full h-full rounded-t-full rounded-b-3xl aspect-[16/9]">
+                            <div className="  bg-gradient-to-br from-orange-600 to-[#ba6b3f] p-3 lg:min-w-[28rem]  lg:h-[250px]  overflow-hidden">
+                                <div className="relative overflow-hidden w-full h-full  aspect-[16/9]">
                                     <Image
                                         src={slides[currentIndex].imageSrc}
                                         alt={`Slide ${currentIndex + 1}`}
@@ -229,8 +238,8 @@ const Shows = () => {
                                 </div>
                             </div>
                             <div className="min-w-80  flex flex-col justify-content items-center">
-                                <p className="text-[#6c6c71] w-full  px-4 xxl:px-4 xl:pr-10 items-center text-start h-full lg:text-[40px]  ">
-                                    <span className="text-white font-semibold">{slides[currentIndex].thead}</span>
+                                <p className="text-white w-full  px-4 xxl:px-4 xl:pr-10 items-center text-start h-full lg:text-[24px]  ">
+                                    <span className="text-[#ba6b3f] font-semibold">{slides[currentIndex].thead}</span>
                                     &nbsp;
                                     {slides[currentIndex].text}
                                     &nbsp;&nbsp;
@@ -316,7 +325,7 @@ const Shows = () => {
                         style={{ transform: "translateX(-1148.88px)", animation: 'marquee 60s linear infinite' }}
                     >
                         <p className="w-full text-center min-w-[20rem] flex justify-center items-center font-500 text-[25px] text-white">
-                            HEADLIGHTS OF TODAY
+                            FRONTEND DEVELOPER
                         </p>
                         <div className="min-w-[4rem]">
                             <svg
@@ -334,7 +343,7 @@ const Shows = () => {
                             </svg>
                         </div>
                         <p className="text-white w-full text-center min-w-[20rem] flex justify-center items-center font-500 text-[25px]">
-                            HEADLIGHTS OF TODAY
+                            REACT DEVELOPER
                         </p>
                         <div className="min-w-[4rem]">
                             <svg
@@ -352,7 +361,7 @@ const Shows = () => {
                             </svg>
                         </div>
                         <p className="text-white w-full text-center min-w-[20rem] flex justify-center items-center font-500 text-[25px]">
-                            HEADLIGHTS OF TODAY
+                            FRONTEND DEVELOPER
                         </p>
                         <div className="min-w-[4rem]">
                             <svg
@@ -370,7 +379,7 @@ const Shows = () => {
                             </svg>
                         </div>
                         <p className="text-white w-full text-center min-w-[20rem] flex justify-center items-center font-500 text-[25px]">
-                            HEADLIGHTS OF TODAY
+                           REACT DEVELOPER
                         </p>
                         <div className="min-w-[4rem]">
                             <svg
@@ -388,7 +397,7 @@ const Shows = () => {
                             </svg>
                         </div>
                         <p className="text-white w-full text-center min-w-[20rem] flex justify-center items-center font-500 text-[25px]">
-                            HEADLIGHTS OF TODAY
+                            FRONTEND DEVELOPER
                         </p>
                         <div className="min-w-[4rem]">
                             <svg
@@ -406,7 +415,7 @@ const Shows = () => {
                             </svg>
                         </div>
                         <p className="text-white w-full text-center min-w-[20rem] flex justify-center items-center font-500 text-[25px]">
-                            HEADLIGHTS OF TODAY
+                            REACT DEVELOPER
                         </p>
                         <div className="min-w-[4rem]">
                             <svg
@@ -424,7 +433,7 @@ const Shows = () => {
                             </svg>
                         </div>
                         <p className="text-white w-full text-center min-w-[20rem] flex justify-center items-center font-500 text-[25px]">
-                            HEADLIGHTS OF TODAY
+                            FRONTEND DEVELOPER
                         </p>
                         <div className="min-w-[4rem]">
                             <svg
@@ -442,7 +451,7 @@ const Shows = () => {
                             </svg>
                         </div>
                         <p className="text-white w-full text-center min-w-[20rem] flex justify-center items-center font-500 text-[25px]">
-                            HEADLIGHTS OF TODAY
+                            REACT DEVELOPER
                         </p>
                         <div className="min-w-[4rem]">
                             <svg
@@ -460,7 +469,7 @@ const Shows = () => {
                             </svg>
                         </div>
                         <p className="w-full text-center min-w-[20rem] flex justify-center items-center font-500 text-[25px] text-white">
-                            HEADLIGHTS OF TODAY
+                            FRONTEND DEVELOPER
                         </p>
                         <div className="min-w-[4rem]">
                             <svg
@@ -484,4 +493,4 @@ const Shows = () => {
     )
 }
 
-export default Shows
+export default Projects

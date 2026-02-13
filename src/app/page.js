@@ -3,7 +3,7 @@ import HeroSection from "./component/HeroSection";
 import Journey from "./component/Journey";
 import MeetTeam from './component/MeetTeam'
 import Navbar from "./component/Navbar";
-import Shows from "./component/Shows";
+import Projects from "./component/Projects";
 import TeamSection from "./component/TeamSection";
 
 
@@ -14,8 +14,8 @@ export default function Home() {
       <HeroSection />
       {/* <Gallery /> */}
       <Journey />
-      <MeetTeam />
-      <Shows />
+      {/* <MeetTeam /> */}
+      <Projects />
       <TeamSection />
    </div>
   );
