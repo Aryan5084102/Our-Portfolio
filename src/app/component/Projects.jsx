@@ -6,6 +6,7 @@ import project1 from '../../../public/img/Project1.png'
 import project2 from '../../../public/img/Project2.png'
 import project3 from '../../../public/img/Project3.png'
 import project4 from '../../../public/img/Project4.png'
+import project5 from '../../../public/img/Project5.png'
 import Link from 'next/link';
 
 
@@ -19,6 +20,13 @@ const Projects = () => {
             text: " with all features like add to cart, remove from cart, same for wishlist also , skeleton and payment integration of razorpay.",
             liveLink : "https://fakeproductdash.netlify.app/",
             codeLink : "https://github.com/Aryan5084102/GlaMart---The-Online-Market"
+        },
+        {
+            imageSrc: project5,
+            thead: "Our Portfolio",
+            text: "this project tells about what my journey and you can react out to this.",
+            liveLink : "https://aryanvermajourney.netlify.app/",
+            codeLink : "https://github.com/Aryan5084102/Our-Portfolio"
         },
         {
             imageSrc: project2,
