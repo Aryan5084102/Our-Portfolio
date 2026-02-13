@@ -38,9 +38,32 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'blackhattalent.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'encrypted-tbn0.gstatic.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'media.licdn.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'consultit.co.in',
+      },
+      {
+        protocol: 'https',
+        hostname: 'psychoprodigy.in',
+      },
+      {
+        protocol: 'https',
+        hostname: 'content3.jdmagicbox.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'content.jdmagicbox.com',
+      },
     ],
   },
 };
 
 export default nextConfig;
-
