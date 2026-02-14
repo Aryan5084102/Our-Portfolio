@@ -8,7 +8,7 @@ import Navbar from "./component/Navbar";
 
 export default function Home() {
   return (
-   <div className="flex flex-col w-[85%] mx-auto gap-12">
+   <div className="flex flex-col w-full max-w-[1920px] mx-auto gap-12 overflow-hidden">
       <Navbar />
       <HeroSection />
       <Skills />
