@@ -29,8 +29,8 @@ const Navbar = () => {
                     </Link>
                 </div>
                 <div>
-                    <Link href="/services" className='font-medium text-white hover:text-[#3bdf7f] transition-colors'>
-                        Our Services
+                    <Link href="https://www.linkedin.com/in/aryan5084102/" target='_blank' className='font-medium text-white hover:text-[#3bdf7f] transition-colors'>
+                        Contact
                     </Link>
                 </div>
             </div>
